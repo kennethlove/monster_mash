@@ -2,9 +2,9 @@ use crate::animation::{AnimationIndices, AnimationTimer};
 use bevy::prelude::*;
 use leafwing_input_manager::prelude::*;
 
-pub struct SpritePlugin;
+pub struct DirectionalSpritePlugin;
 
-impl Plugin for SpritePlugin {
+impl Plugin for DirectionalSpritePlugin {
     fn build(&self, app: &mut App) {
         app.add_plugins(InputManagerPlugin::<DirectionalSpriteAction>::default())
             .add_event::<TurnEvent>()

@@ -21,7 +21,7 @@ fn main() {
         .add_plugins((
             monster_mash::animation::AnimationPlugin,
             BackgroundPlugin,
-            monster_mash::sprite::SpritePlugin,
+            DirectionalSpritePlugin,
         ))
         .add_systems(Startup, spawn_camera)
         .add_systems(Update, bevy::window::close_on_esc)
