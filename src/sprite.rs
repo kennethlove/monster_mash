@@ -229,7 +229,9 @@ fn turn_sprite(
         for (entity, mut atlas) in &mut query {
             let mut entity = commands.entity(entity);
             entity.insert(indices.clone());
-            atlas.index = indices.first;
+            if atlas.index < indices.first || atlas.index > indices.last {
+                atlas.index = indices.first;
+            }
         }
     }
 }
